@@ -580,7 +580,7 @@
   .wip-project { grid-template-columns: 1.5rem 1fr 2.75rem; padding-inline: .75rem; }
   .wip-status { display: none; }
   .project-art { min-height: 230px; }
-  .project-card { padding: 1.15rem; }
+  .project-card { padding: .8rem; }
   .featured-project { padding: 1rem; }
   .project-card-actions { display: grid; grid-template-columns: 1fr; }
   .project-card-actions > * { width: 100%; }

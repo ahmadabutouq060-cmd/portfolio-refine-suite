@@ -6,7 +6,7 @@ import { AmbientBackground } from "@/components/portfolio/AmbientBackground";
 import { IntroOverlay } from "@/components/portfolio/IntroOverlay";
 import { ProjectCard } from "@/components/portfolio/ProjectCard";
 import { ProjectDetails } from "@/components/portfolio/ProjectDetails";
-import { RikazShowcase } from "@/components/portfolio/RikazShowcase";
+
 import { Button } from "@/components/ui/button";
 import { projects, type Project } from "@/data/projects";
 import { EMAIL_ADDRESS, GITHUB_URL, LINKEDIN_URL } from "@/data/socials";
@@ -275,13 +275,14 @@ export function Portfolio() {
 
         <section id="skills" className="skills-section container-wide section-space" data-reveal>
           <SectionHeading number="02" label="Skills" title="Technologies I work with." />
-          <div className="skills-list">
+          <p className="section-intro">The core stack behind my web, mobile and desktop projects.</p>
+          <div className="skills-grid">
             {primaryStack.map((skill, index) => {
               const Icon = skill.icon;
               return (
                 <article key={skill.name} style={{ ["--skill-color" as string]: `hsl(${skill.color})` }}>
-                  <span className="skill-index">0{index + 1}</span>
                   <span className="skill-icon" aria-hidden="true"><Icon /></span>
+                  <span className="skill-index">0{index + 1}</span>
                   <h3>{skill.name}</h3>
                   <p>{skill.detail}</p>
                 </article>
@@ -324,16 +325,9 @@ export function Portfolio() {
           <p className="section-intro">Real repositories and design work — every technology, feature and link below comes from the project source itself.</p>
 
           <div className="project-list" aria-label="Projects">
-            {visibleProjects
-              .filter((project) => project.id === "rikaz")
-              .map((project) => (
-                <RikazShowcase key={project.id} project={project} />
-              ))}
-            {visibleProjects
-              .filter((project) => project.id !== "rikaz")
-              .map((project) => (
-                <ProjectCard key={project.id} project={project} onOpenDetails={setSelectedProject} />
-              ))}
+            {visibleProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} onOpenDetails={setSelectedProject} />
+            ))}
           </div>
         </section>
 

@@ -779,12 +779,7 @@ html[data-scrolled="true"] .site-header { border-bottom-color: color-mix(in okla
 .work-section .section-intro { margin-top: 1.25rem; }
 .featured-project { margin-top: 2.5rem; padding: clamp(1.5rem, 3vw, 2.75rem); border-radius: 2rem; }
 .featured-project h3 { font-size: clamp(2.4rem, 5vw, 4.4rem); font-weight: 700; letter-spacing: -.03em; }
-.project-list { grid-template-columns: repeat(6, minmax(0,1fr)); gap: 1rem; margin-top: 1rem; }
-.project-list > .project-card { grid-column: span 3; border-radius: 1.75rem; padding: clamp(1.4rem, 2.4vw, 2.1rem); }
-.project-list > .project-card:nth-child(3n+1) { grid-column: span 4; }
-.project-list > .project-card:nth-child(3n+2) { grid-column: span 2; }
-.project-list > .project-card:nth-child(3n) { grid-column: span 6; }
-.project-card h3 { font-size: clamp(1.5rem, 2.2vw, 2.1rem); letter-spacing: -.02em; }
+.project-list { grid-template-columns: repeat(3, minmax(0,1fr)); gap: .95rem; margin-top: 1.6rem; }
 
 /* Journey + education side by side */
 .studio-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -817,11 +812,7 @@ html[data-scrolled="true"] .site-header { border-bottom-color: color-mix(in okla
   .expertise-list article { grid-template-columns: 3rem 1fr; }
   .expertise-list p { grid-column: 2; }
   .studio-grid { grid-template-columns: 1fr; }
-  .project-list { grid-template-columns: 1fr; }
-  .project-list > .project-card,
-  .project-list > .project-card:nth-child(3n+1),
-  .project-list > .project-card:nth-child(3n+2),
-  .project-list > .project-card:nth-child(3n) { grid-column: auto; }
+  .project-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .about-section { grid-template-columns: 1fr; }
 }
 

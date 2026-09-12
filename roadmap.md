@@ -1,0 +1,5 @@
+- [x] Preserve and restore the uploaded portfolio structure and real project data.
+- [x] Polish existing hero, navigation, projects, stack, contact, and footer.
+- [x] Set university attendance start year to 2024.
+- [x] Add LinkedIn profile: https://linkedin.com/in/ahmad-abu-touq-728924338
+- [x] Verify build, links, images, dialogs, placeholders, and requested viewport widths.

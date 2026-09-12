@@ -365,18 +365,22 @@
 .featured-project h3 { letter-spacing: 0; font-weight: 600; }
 .featured-project > p { font-size: 1.02rem; line-height: 1.7; }
 
-.project-list { display: grid; gap: .85rem; margin-top: 1.1rem; }
-.project-card { position: relative; display: flex; flex-direction: column; overflow: hidden; border: 1px solid color-mix(in oklab,var(--border) 60%,transparent); border-radius: 1.25rem; padding: 1.4rem 1.4rem 1.5rem; background: color-mix(in oklab,var(--secondary) 78%,transparent); transition: transform .3s cubic-bezier(.32,.72,0,1), background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.project-list { display: grid; gap: .9rem; margin-top: 1.4rem; }
+.project-card { position: relative; display: flex; flex-direction: row; align-items: stretch; gap: 1rem; overflow: hidden; border: 1px solid color-mix(in oklab,var(--border) 60%,transparent); border-radius: 1.15rem; padding: .85rem; min-height: 160px; background: color-mix(in oklab,var(--secondary) 78%,transparent); transition: transform .3s cubic-bezier(.32,.72,0,1), background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
 .project-card::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 2px; transform: scaleY(0); transform-origin: top; background: var(--primary); transition: transform .3s cubic-bezier(.32,.72,0,1); }
 .project-card:hover { transform: translateY(-3px); border-color: color-mix(in oklab,var(--primary) 30%,var(--border)); background: var(--card); box-shadow: 0 22px 48px -38px oklch(0 0 0 / .9); }
 .project-card:hover::after { transform: scaleY(1); }
-.project-card-top { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; }
+.project-thumb { position: relative; flex: 0 0 28%; overflow: hidden; border-radius: .8rem; background: var(--secondary); box-shadow: inset 0 0 0 1px color-mix(in oklab,var(--border) 60%,transparent); }
+.project-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: transform .55s cubic-bezier(.32,.72,0,1); }
+.project-card:hover .project-thumb img { transform: scale(1.05); }
+.project-thumb-fallback { display: grid; place-items: center; width: 100%; height: 100%; color: var(--primary); font-family: var(--font-mono); font-size: 1.1rem; }
+.project-card-body { display: flex; min-width: 0; flex: 1; flex-direction: column; padding: .25rem .35rem .25rem 0; }
+.project-card-top { display: flex; align-items: center; gap: .65rem; min-width: 0; }
 .project-card-number { color: var(--primary); font-family: var(--font-mono); font-size: .68rem; }
-.project-card-top .eyebrow { margin: 0; letter-spacing: .08em; }
-.project-card-status { margin-left: auto; border-radius: 999px; padding: .26rem .62rem; background: color-mix(in oklab,var(--primary) 12%,transparent); color: var(--primary); font-family: var(--font-mono); font-size: .55rem; letter-spacing: .05em; text-transform: uppercase; }
-.project-card h3 { margin: .9rem 0 .5rem; font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; letter-spacing: 0; line-height: 1.15; }
-.project-card-description { margin: 0; max-width: 62ch; color: var(--muted-foreground); font-size: .9rem; line-height: 1.65; }
-.project-card .tech-badge-list { margin-top: auto; padding-top: 1.15rem; }
+.project-card-top .eyebrow { margin: 0; letter-spacing: .08em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.project-card h3 { margin: .55rem 0 0; font-family: var(--font-display); font-size: 1.18rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; }
+.project-card-link { display: inline-flex; align-items: center; gap: .4rem; align-self: flex-start; margin-top: auto; padding: .3rem 0; border: 0; background: transparent; color: var(--primary); font-family: var(--font-display); font-size: .82rem; font-weight: 600; cursor: pointer; transition: gap .2s ease, color .2s ease; }
+.project-card-link:hover { gap: .6rem; color: var(--accent-cyan); }
 
 /* Rikaz premium showcase */
 .rikaz-showcase {

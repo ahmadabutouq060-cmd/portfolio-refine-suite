@@ -776,7 +776,7 @@ html[data-scrolled="true"] .site-header { border-bottom-color: color-mix(in okla
 .project-filter { border: 1px solid color-mix(in oklab, var(--border) 70%, transparent); border-radius: 999px; padding: .55rem 1.1rem; background: transparent; color: var(--muted-foreground); font-family: var(--font-display); font-size: .8rem; font-weight: 550; cursor: pointer; transition: color .2s ease, border-color .2s ease, background-color .2s ease; }
 .project-filter:hover { color: var(--foreground); border-color: color-mix(in oklab, var(--electric) 50%, transparent); }
 .project-filter.is-active { border-color: transparent; background: var(--electric); color: oklch(1 0 0); }
-.work-section .section-intro { margin-top: 1.25rem; }
+.work-section .section-intro { margin-top: .9rem; }
 .featured-project { margin-top: 2.5rem; padding: clamp(1.5rem, 3vw, 2.75rem); border-radius: 2rem; }
 .featured-project h3 { font-size: clamp(2.4rem, 5vw, 4.4rem); font-weight: 700; letter-spacing: -.03em; }
 .project-list { grid-template-columns: repeat(3, minmax(0,1fr)); gap: .95rem; margin-top: 1.6rem; }
@@ -1141,33 +1141,10 @@ html, body { max-width: 100%; overflow-x: clip; }
 }
 .portfolio-shell > .intro-overlay { position: fixed; z-index: 10000; }
 
-/* --- Skills: single editorial list --- */
-.skills-list { margin-top: 2.5rem; border-top: 1px solid color-mix(in oklab, var(--border) 60%, transparent); }
-.skills-list article {
-  display: grid;
-  grid-template-columns: 3.5rem 2.5rem minmax(0, 16rem) minmax(0, 1fr);
-  align-items: center;
-  gap: 1.5rem;
-  padding-block: clamp(1.4rem, 2.8vw, 2.2rem);
-  border-bottom: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
-  transition: background-color .3s ease, padding-inline .3s ease;
-}
-.skills-list article:hover { background: color-mix(in oklab, var(--electric) 7%, transparent); padding-inline: 1.25rem; }
+/* --- Skills base tokens --- */
 .skill-index { color: var(--accent-cyan); font-family: var(--font-mono); font-size: .7rem; }
 .skill-icon { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 1px solid color-mix(in oklab, var(--border) 65%, transparent); border-radius: .75rem; color: color-mix(in oklab, var(--foreground) 78%, transparent); transition: color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
 .skill-icon svg { width: 1.15rem; height: 1.15rem; display: block; }
-.skills-list article:hover .skill-icon { color: var(--accent-cyan); border-color: color-mix(in oklab, var(--electric) 60%, transparent); box-shadow: 0 0 26px -14px color-mix(in oklab, var(--accent-cyan) 85%, transparent); transform: translateY(-2px); }
-.skills-list h3 { margin: 0; font-family: var(--font-display); font-size: clamp(1.35rem, 2.2vw, 1.9rem); font-weight: 650; letter-spacing: -.02em; }
-.skills-list p { margin: 0; color: var(--muted-foreground); font-size: .92rem; line-height: 1.6; }
-@media (max-width: 980px) {
-  .skills-list article { grid-template-columns: 3rem 2.5rem minmax(0, 1fr); }
-  .skills-list p { grid-column: 2 / -1; }
-}
-@media (max-width: 560px) {
-  .skills-list article { grid-template-columns: 2.25rem 1fr; gap: .6rem 1rem; }
-  .skills-list .skill-icon { grid-column: 2; justify-self: start; }
-  .skills-list h3, .skills-list p { grid-column: 2; }
-}
 
 /* --- Navigation: one desktop nav, one mobile nav --- */
 .site-header { z-index: 200; }

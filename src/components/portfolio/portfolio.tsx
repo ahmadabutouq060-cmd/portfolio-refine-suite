@@ -22,15 +22,15 @@ const navItems = [
 
 
 const primaryStack = [
-  { name: "Flutter", icon: Smartphone, color: "197 85% 62%", detail: "Mobile apps: Expense Tracker and Dice Roller." },
-  { name: "Dart", icon: Code2, color: "174 70% 48%", detail: "Language behind every Flutter project here." },
-  { name: "Java", icon: Coffee, color: "27 92% 58%", detail: "JavaFX desktop application AUShop." },
-  { name: "C++", icon: Terminal, color: "220 85% 62%", detail: "Programming and data-structures coursework." },
-  { name: "SQL", icon: Database, color: "160 70% 48%", detail: "MySQL / MariaDB schema behind AUShop." },
-  { name: "HTML", icon: FileCode2, color: "18 90% 58%", detail: "Structure and markup behind the Ri'aya web platform." },
-  { name: "CSS", icon: Palette, color: "212 88% 62%", detail: "Layout, responsive rules and styling for web interfaces." },
-  { name: "JavaScript", icon: Braces, color: "48 95% 58%", detail: "Interactive behaviour and Supabase calls in Ri'aya." },
-  { name: "UI/UX", icon: PenTool, color: "300 75% 66%", detail: "Designing clean, user-friendly interfaces across web and mobile projects." },
+  { name: "Flutter", icon: Smartphone, color: "197 85% 62%" },
+  { name: "Dart", icon: Code2, color: "174 70% 48%" },
+  { name: "Java", icon: Coffee, color: "27 92% 58%" },
+  { name: "C++", icon: Terminal, color: "220 85% 62%" },
+  { name: "SQL", icon: Database, color: "160 70% 48%" },
+  { name: "HTML", icon: FileCode2, color: "18 90% 58%" },
+  { name: "CSS", icon: Palette, color: "212 88% 62%" },
+  { name: "JavaScript", icon: Braces, color: "48 95% 58%" },
+  { name: "UI/UX", icon: PenTool, color: "300 75% 66%" },
 ];
 
 
@@ -275,16 +275,13 @@ export function Portfolio() {
 
         <section id="skills" className="skills-section container-wide section-space" data-reveal>
           <SectionHeading number="02" label="Skills" title="Technologies I work with." />
-          <p className="section-intro">The core stack behind my web, mobile and desktop projects.</p>
           <div className="skills-grid">
-            {primaryStack.map((skill, index) => {
+            {primaryStack.map((skill) => {
               const Icon = skill.icon;
               return (
                 <article key={skill.name} style={{ ["--skill-color" as string]: `hsl(${skill.color})` }}>
                   <span className="skill-icon" aria-hidden="true"><Icon /></span>
-                  <span className="skill-index">0{index + 1}</span>
                   <h3>{skill.name}</h3>
-                  <p>{skill.detail}</p>
                 </article>
               );
             })}

@@ -18,6 +18,13 @@ export type Project = {
   problem?: string;
   solution?: string;
   features?: string[];
+  role?: string;
+  contributions?: string;
+  outcomes?: string;
+  published?: boolean;
+  filterGroup?: string;
+  gallery?: { url: string; caption: string }[];
+  documents?: { url: string; name: string }[];
 };
 
 /**
@@ -136,5 +143,5 @@ export const projects: Project[] = [
   },
 ];
 
-export const featuredProject: Project = projects.find((project) => project.featured) ?? projects[0]!;
+export const featuredProject = projects.find((project) => project.featured) ?? projects[0];
 export const otherProjects = projects.filter((project) => project !== featuredProject);

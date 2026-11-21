@@ -1,0 +1,13 @@
+{
+  "source": "sweet-creator-suite-main.zip",
+  "capabilities": [
+    {"capability":"code and routes","source":"TanStack Start archive and existing project","outcome":"preserve framework; redesign in place","status":"audited","next_action":"Implement public portfolio and private editor"},
+    {"capability":"schema and records","source":"Static project data; no existing database","outcome":"migrate literal portfolio content into Cloud","status":"pending","next_action":"Create schema with seeded real projects and settings"},
+    {"capability":"auth identities and authorization","source":"No source authentication; brief requests Google owner","outcome":"Google login with server-controlled owner access","status":"pending","next_action":"Await explicitly authorized Google email; keep access closed meanwhile"},
+    {"capability":"uploaded file bytes","source":"Archive CDN pointers, current portrait and project screenshots","outcome":"preserve real assets; owner-managed public and private storage","status":"pending","next_action":"Verify archive pointers and implement uploads"},
+    {"capability":"external providers and public endpoints","source":"GitHub, Figma, live demo links; no APIs, payments, webhooks or schedules detected","outcome":"retain actual links; no external service migration required","status":"audited","next_action":"Verify links remain present"},
+    {"capability":"contact","source":"Existing email and LinkedIn; brief requests contact form","outcome":"Validated messages stored privately for owner","status":"pending","next_action":"Implement form, spam limits and private inbox"},
+    {"capability":"cutover and repository","source":"Current Lovable repository; supplied source repository reference","outcome":"preserve working tree and history; no remote changes","status":"pending","next_action":"Commit changes; publishing and external GitHub sync remain unverified"},
+    {"capability":"verification","source":"Brief desktop/mobile, theme, dialogs, CRUD, storage and access requirements","outcome":"test supported flows and identify remaining owner setup","status":"pending","next_action":"Browser checks plus permission and validation tests"}
+  ]
+}

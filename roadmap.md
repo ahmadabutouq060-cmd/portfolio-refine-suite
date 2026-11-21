@@ -3,3 +3,11 @@
 - [x] Set university attendance start year to 2024.
 - [x] Add LinkedIn profile: https://linkedin.com/in/ahmad-abu-touq-728924338
 - [x] Verify build, links, images, dialogs, placeholders, and requested viewport widths.
+
+- [x] Audit current portfolio and supplied archive before redesign.
+- [ ] Redesign public portfolio with dark/light themes, featured work, grouped stack, real certificates, and contact form.
+- [ ] Create Cloud schema, published/draft access rules, owner authorization, and public/private file storage.
+- [ ] Build private project, content, skills, media, and message management.
+- [ ] Authorize the owner's explicitly supplied Google account (waiting for email).
+- [ ] Verify public and signed-in editing, publishing, uploads, and access boundaries.
+- [ ] Document independent setup and save changes without modifying repository history.
